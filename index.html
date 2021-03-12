@@ -1,0 +1,43 @@
+<div class="person">
+    <div class="head"></div>
+    <div class="body"></div>
+</div>
+    
+
+<style>
+    .person{
+        position: relative;
+    }
+
+    .head {
+        position: relative;
+        left: 10px;
+        content:url(head.svg);
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-iteration-count: 10;
+        animation-timing-function:ease-in-out;
+    }
+
+    .body{
+        content:url(body.svg);
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0);
+        }
+
+        25% {
+            transform: rotate(10deg);
+        }
+
+        75%{
+            transform: rotate(-10deg);
+        }
+
+        99%{
+            transform: rotate(0);
+        }
+    }
+</style>
