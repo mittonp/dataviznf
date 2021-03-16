@@ -1,0 +1,67 @@
+.scene{
+    background: linear-gradient(180deg, #080437 3.65%, #191768 100%);
+    position:relative;
+    width:100%;
+  } 
+  
+  .person{
+          position: relative;
+          animation-name: slide;
+          animation-duration: 20s;
+          animation-iteration-count: infinite;
+          animation-timing-function: ease-in-out;
+      }
+  
+      .head {
+          position: relative;
+          left: 15px;
+          top:25px;
+          content:url('https://raw.githubusercontent.com/mittonp/dataviznf/master/head.svg');
+          animation-name: nod;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-timing-function:ease-in-out;
+      }
+  
+      .torso{
+          content:url('https://raw.githubusercontent.com/mittonp/dataviznf/master/torso.svg');
+      }
+
+      .arms{
+        content:url('https://raw.githubusercontent.com/mittonp/dataviznf/master/arms.svg');
+    }
+
+    .legs{
+        content:url('https://raw.githubusercontent.com/mittonp/dataviznf/master/legs.svg');
+    }
+  
+      @keyframes nod {
+          0% {
+              transform: rotate(0);
+          }
+  
+          25% {
+              transform: rotate(10deg);
+          }
+  
+          75%{
+              transform: rotate(-10deg);
+          }
+  
+          99%{
+              transform: rotate(0);
+          }
+      }
+
+      @keyframes slide{
+          0%{
+              left: 0%;
+          }
+
+          50%{
+              left:50%
+          }
+          100%{
+              left:0;
+          }
+      }
