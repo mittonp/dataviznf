@@ -2,11 +2,12 @@
     background: linear-gradient(180deg, #080437 3.65%, #191768 100%);
     position:relative;
     width:100%;
+    padding:100px
   } 
   
   .person{
           position: relative;
-          animation-name: slide;
+          /* animation-name: slide; */
           animation-duration: 20s;
           animation-iteration-count: infinite;
           animation-timing-function: ease-in-out;
@@ -14,21 +15,32 @@
   
       .head {
           position: relative;
-          left: 15px;
-          top:25px;
+          left: 10px;
+          top:30px;
           content:url('https://raw.githubusercontent.com/mittonp/dataviznf/master/head.svg');
-          animation-name: nod;
+          /* animation-name: nod; */
           animation-duration: 5s;
           animation-iteration-count: infinite;
           animation-timing-function:ease-in-out;
+          transform-origin: bottom left;
       }
   
       .torso{
           content:url('https://raw.githubusercontent.com/mittonp/dataviznf/master/torso.svg');
+          animation-name: breathe;
+          animation-duration: 3s;
+          animation-iteration-count: infinite;
+          animation-timing-function: ease-in;
+          transform-origin: bottom left;
+          position:relative;
+          left:-4px;
       }
 
-      .arms{
-        content:url('https://raw.githubusercontent.com/mittonp/dataviznf/master/arms.svg');
+      .arm{
+        content:url('https://raw.githubusercontent.com/mittonp/dataviznf/master/arm.svg');
+        position:absolute;
+        top:154px;
+        left:52px;
     }
 
     .legs{
@@ -63,5 +75,17 @@
           }
           100%{
               left:0;
+          }
+      }
+
+      @keyframes breathe{
+          0%{
+              transform: scale(1,1);
+          }
+          25%{
+              transform: scale(1.03,1);
+          }
+          75%{
+              transform: scale(1,1) ;
           }
       }
