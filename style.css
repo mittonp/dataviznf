@@ -1,17 +1,36 @@
-.scene{
-    background: linear-gradient(180deg, #080437 3.65%, #191768 100%);
-    position:relative;
+.scene1{
+content:url('scene.svg');
+width:auto;
+position: absolute;
+}
+
+.scene2{
+    content:url('scene2.svg');
     width:100%;
-    padding:100px
+    position: absolute;
+}
+
+
+.scene{
+    background: url('background.svg');
+  height:100vh;
+    position:fixed;
+    width:100%;
+    padding:50px
+
   } 
   
   .person{
-          position: relative;
+          position: fixed;
           /* animation-name: slide; */
           animation-duration: 20s;
           animation-iteration-count: infinite;
           animation-timing-function: ease-in-out;
       }
+
+.person--mirror{
+  transform: scalex(-1);
+}
   
       .head {
           position: relative;
@@ -24,6 +43,20 @@
           animation-timing-function:ease-in-out;
           transform-origin: bottom left;
       }
+
+      .float-rotate{
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+          animation-name: float-rotate;
+      }
+
+      .float-skew{
+        animation-duration: 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in;
+        animation-name: float-skew;
+    }
   
       .torso{
           content:url('https://raw.githubusercontent.com/mittonp/dataviznf/master/torso.svg');
@@ -111,3 +144,35 @@
               transform: rotate(0);
           }
       }
+
+      @keyframes float-rotate{
+          0%{
+              transform: rotate(0);
+          }
+          10%{
+              transform: rotate(5deg);
+          }
+          20%{
+              transform: rotate(0);
+          }
+          30%{
+              transform: rotate(-5deg);
+          }
+
+      }
+
+      @keyframes float-skew{
+        0%{
+            transform: rotateX(0) rotate(0);
+        }
+        10%{
+            transform: rotateX(15deg) rotate(5deg);
+        }
+        20%{
+            transform: rotateX(0) rotate(0);
+        }
+        30%{
+            transform: rotateX(-15deg) rotate(-5deg);
+        }
+
+    }
