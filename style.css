@@ -41,6 +41,11 @@
         position:absolute;
         top:154px;
         left:52px;
+        animation-name: movearm;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        transform-origin: center left;
     }
 
     .legs{
@@ -87,5 +92,22 @@
           }
           75%{
               transform: scale(1,1) ;
+          }
+      }
+
+      @keyframes movearm{
+          0%{
+              transform: rotate(0);
+          }
+          25%{
+              transform: rotate(10deg);
+          }
+
+          75%{
+              transform: rotate(-10deg)
+          }
+
+          100%{
+              transform: rotate(0);
           }
       }
