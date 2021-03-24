@@ -1,13 +1,16 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="stomach.css">
+    </head>
     <body>
         
     
 <div class="stomach">
     <div class="food-particles"
-    data-1="top:-90px; left:600px; transform:rotate(80deg)"
-    data-2000="top:-90px; left:400px; transform:rotate(80deg)"
-    data-3000="top:0px; left:320px; transform:rotate(0deg)"
-    data-10000="top:1400px; opacity:1"
+    data-1="top:0%; left:50%; transform:rotate(80deg)"
+    data-2000="top:0%; left:40%; transform:rotate(80deg)"
+    data-3000="top:0%; left:40%; transform:rotate(0deg)"
+    data-10000="top:64%; opacity:1"
     data-11000="opacity:0"
     ></div>
     <div class="goodgut" 
@@ -22,61 +25,15 @@
     ></div>
 
     <div class="reflux"
-    data-20000="top:1500px; left:240px; transform:scale(0vh)"
-    data-25000="transform:scale(100vh)"
-    data-35000="top:200px"
+    data-20000="left:25%; transform:scale(0)"
+    data-25000="transform:scale(1); top:60%"
+    data-30000="top:10%"
     
     ></div>
 </body>
 </html>
 <style>
-    .stomach{
-        background-image: url(stomach.svg);
-        width: 893px;
-        height: 2346px;
-        position:fixed;
-    }
-
-    .food-particles{
-        position: absolute;
-        background-image: url("food particles.svg");
-        width: 150px;
-        height: 300px;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .reflux{
-        position: absolute;
-        background-image: url("reflux.svg");
-        width: 300px;
-        height: 300px;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .goodgut{
-        background-image:url("goodgut.svg");
-        width:500px;
-        height: 501px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        
-        position: absolute;
-        top:1850px;
-        left:300px;
-    }
-    .badgut{
-        background-image:url("badgut.svg");
-        width:500px;
-        height: 701px;
-        background-size: contain;
-        background-repeat: no-repeat;
-        
-        position: absolute;
-        top:1650px;
-        left:300px;
-    }
+    
 </style>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
